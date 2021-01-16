@@ -33,7 +33,6 @@
         <img src="images/burger.svg" alt="burger icon">
       </button>
     </div>
-    <!-- <img class="img__header" src="images/bg/header__bg__decoration.png"> -->
   </header>
 
   <main>
@@ -45,7 +44,7 @@
             <p class="info__description">Качайте и пользуйтесь 30 дней бесплатно!
               Начните инвестировать исключительно в перспективные и
               надёжные компании</p>
-            <button class="info__btn" type="button">Скачать бесплатно</button>
+            <div class="info__btn">Скачать бесплатно</div>
           </div>
         </div>
       </div>
@@ -187,7 +186,7 @@
         <h2 class="consultation__title">Записаться на бесплатную консультацию</h2>
         <div class="consultation__container">
           <form method="post" name="consultation-profile-form" class="consultation__form"
-            id="consultation-profile-form">
+            id="consultation-profile-form" action="mail/send.php">
             <fieldset class="consultation__form-set">
               <label class="consultation__form-field">
                 <input placeholder="Ваше имя:" id="name-input" type="text"
@@ -197,15 +196,15 @@
               </label>
               <label class="consultation__form-field">
                 <input id="job-input" placeholder="Ваш номер телефона:" type="telephone"
-                  class="consultation__form-input consultation__form-job" name="about" required />
+                  class="consultation__form-input consultation__form-job" name="telephone" required />
                 <span class='consultation__form-input-error' id='job-input-error'></span>
               </label>
               <label class="consultation__form-field">
-                <textarea placeholder="Комментарии:" id="textarea" class="consultation__form-textarea" name="name"
+                <textarea placeholder="Комментарии:" id="textarea" class="consultation__form-textarea" name="message"
                   minlength="10" maxlength="999"></textarea>
                 <span class='consultation__form-input-error' id='name-input-error'></span>
               </label>
-              <button class="consultation__button-save consultation__button-submit" type="submit">Записаться
+              <button class="consultation__button-save consultation__button-submit" type="submit" name="send">Записаться
                 консультацию</button>
             </fieldset>
           </form>
